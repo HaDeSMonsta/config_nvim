@@ -1,7 +1,7 @@
 -- mason-lspconfig requires that these setup functions are called in this order
 -- before setting up the servers.
-require('mason').setup()
-require('mason-lspconfig').setup()
+require("mason").setup()
+require("mason-lspconfig").setup()
 
 local servers = {
   clangd = {},
@@ -9,7 +9,7 @@ local servers = {
   pyright = {},
   rust_analyzer = {},
   tsserver = {},
-  html = { filetypes = { 'html', 'twig', 'hbs'} },
+  html = { filetypes = { "html", "twig", "hbs"} },
 
   lua_ls = {
     Lua = {
