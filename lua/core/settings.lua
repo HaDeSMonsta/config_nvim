@@ -20,3 +20,13 @@ vim.o.timeoutlen = 300
 
 -- Sign column is the thing left of the line numbers, in auto it is only there, if it's used'
 vim.wo.signcolumn = "auto"
+
+-- Highlight on yank
+local highlight_group = vim.api.nvim_create_augroup("YankHighlight", { clear = true })
+vim.api.nvim_create_autocmd("TextYankPost", {
+	callback = function()
+		vim.highlight.on_yank()
+	end,
+	group = highlight_group,
+	pattern = "*",
+})
