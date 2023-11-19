@@ -15,7 +15,7 @@ require"nvim-treesitter.configs".setup {
   highlight = { enable = true, additional_vim_regex_highlighting = false },
   -- indent = { enable = true }, -- don't, it's annoying and inconsistent
   incremental_selection = {
-    enable, true,
+    enable = true,
     keymaps = {
       init_selection = "<c-space>",
       scope_incremental = "<c-s>",

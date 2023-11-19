@@ -130,7 +130,11 @@ local plugins = {
     },
     build = ":TSUpdate",
   },
-  
+
+  -- Show treesitter information directly
+  -- :TSPlaygroundToggle
+  "nvim-treesitter/playground",
+
   -- Haskell language server
   {
     "mrcjkb/haskell-tools.nvim",
