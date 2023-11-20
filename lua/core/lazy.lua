@@ -177,8 +177,12 @@ local plugins = {
   },
 
   "nvim-lua/plenary.nvim", -- required for harpoon 
-  "ThePrimeagen/harpoon"
-} 
+  "ThePrimeagen/harpoon",
+
+  -- Show files on the left
+  "nvim-tree/nvim-tree.lua",
+  "nvim-tree/nvim-web-devicons",
+}
 
 local opts = {}
 
