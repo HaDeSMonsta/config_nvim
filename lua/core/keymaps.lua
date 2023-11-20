@@ -24,6 +24,7 @@ vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
 
 -- Easier copy/paste
 vim.keymap.set("n", "<leader>p", "\"+p", { desc = "Paste from clipboard" })
+vim.keymap.set("v", "P", "\"+p", { desc = "Pastw from clipboard" })
 vim.keymap.set("v", "Y", "\"+y", { desc = "Yank to clipboard" })
 
 -- Security, I guess (?)
@@ -43,3 +44,13 @@ vim.keymap.set("n", "[d", vim.diagnostic.goto_prev, { desc = "Go to previous dia
 vim.keymap.set("n", "]d", vim.diagnostic.goto_next, { desc = "Go to next diagnostic message" })
 vim.keymap.set("n", "<leader>e", vim.diagnostic.open_float, { desc = "Open floating diagnostic message" })
 vim.keymap.set("n", "<leader>q", vim.diagnostic.setloclist, { desc = "Open diagnostics list" })
+
+-- W Keybinds
+vim.keymap.set("n", "<leader>wv", "<C-w>v",{ desc = "Split vertically" })
+vim.keymap.set("n", "<leader>ws", "<C-w>s",{ desc = "Split window" })
+vim.keymap.set("n", "<leader>wo", "<C-w>o",{ desc = "Close all [O]ther windows" })
+-- Move in windows
+vim.keymap.set("n", "<leader>wh", "<C-w>h", { desc = "Switch to left window" })
+vim.keymap.set("n", "<leader>wj", "<C-w>j", { desc = "Switch to lower window" })
+vim.keymap.set("n", "<leader>wk", "<C-w>k", { desc = "Switch to upper window" })
+vim.keymap.set("n", "<leader>wl", "<C-w>l", { desc = "Switch to right window" })
