@@ -2,7 +2,8 @@ require("nvim-tree").setup()
 
 vim.keymap.set("n", "<leader>tt", ":NvimTreeToggle<cr>", { desc = "[T]ree [T]oggle" })
 vim.keymap.set("n", "<leader>tf", ":NvimTreeFocus<cr>", { desc = "[T]ree [F]ocus" })
-vim.keymap.set("n", "<leader>tc", ":NvimTreeCollapse<cr>", { desc = "[T]ree [C]ollapse" })
+vim.keymap.set("n", "<leader>tca", ":NvimTreeCollapse<cr>", { desc = "[T]ree [C]ollapse [A]ll" })
+vim.keymap.set("n", "<leader>tck", ":NvimTreeCollapseKeepBuffers<cr>", { desc = "[T]ree [C]ollapse [K]eep current buffer" }) -- Doesn't realy work, maybe remove'
 vim.keymap.set("n", "<leader>tr", ":NvimTreeRefresh<cr>", { desc = "[T]ree [R]efresh" })
 
 require("nvim-web-devicons").setup({

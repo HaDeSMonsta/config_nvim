@@ -182,6 +182,9 @@ local plugins = {
   -- Show files on the left
   "nvim-tree/nvim-tree.lua",
   "nvim-tree/nvim-web-devicons",
+
+  -- Cobol LSP
+  "jamesnvc/lsp_server",
 }
 
 local opts = {}
