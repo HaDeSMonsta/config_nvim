@@ -28,9 +28,10 @@ vim.keymap.set("v", "P", "\"+p", { desc = "Pastw from clipboard" })
 vim.keymap.set("v", "Y", "\"+y", { desc = "Yank to clipboard" })
 
 -- Security, I guess (?)
-vim.keymap.set("n", "Q", "" )
-
--- Disable leader key
+vim.keymap.set("n", "Q", "<Nop>")
+-- Another type of safety, I guess
+vim.keymap.set("i", "<C-c>", "<Esc>")
+-- Disable leader key (also safety?)
 vim.keymap.set({ "n" }, "<leader>", "<Nop>", { silent = true })
 
 -- If there is no number before the j/k in wrapped lines it will go up and down in those

@@ -10,13 +10,31 @@ vim.opt["guicursor"] = ""
 -- Don't have less than 8 lines space to the border
 vim.opt.scrolloff = 8
 
+-- Define indentation
+vim.opt.tabstop = 2
+vim.opt.softtabstop = 2
+vim.opt.shiftwidth = 2
+vim.opt.expandtab = true
+
+-- Make nvim automatically indent when appropriate
+vim.opt.smartindent = true
+
+-- Longer lines will be wrapped, is default I think, but better safe than sorry
+vim.opt.wrap = true
+
 -- Case-insensitive searching UNLESS \C or capital in search
 vim.o.ignorecase = true
 vim.o.smartcase = true
+-- Better search experience
+vim.opt.hlsearch = false
+vim.opt.incsearch = true
 
 -- Decrease update time => Decrease time until nvim switches in "idle" state (not moved cursor)
 vim.o.updatetime = 250
 vim.o.timeoutlen = 300
+
+-- Good thing in theory, but the colour is full red
+-- vim.opt.colorcolumn = "80"
 
 -- Sign column is the thing left of the line numbers, in auto it is only there, if it's used'
 vim.wo.signcolumn = "auto"
