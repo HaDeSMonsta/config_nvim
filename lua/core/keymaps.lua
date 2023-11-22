@@ -23,7 +23,8 @@ vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
 vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
 
 -- Easier copy/paste
-vim.keymap.set("n", "<leader>p", "\"+p", { desc = "Paste from clipboard" })
+vim.keymap.set("n", "<leader>p", "\"+p", { desc = "Paste from clipboard (\"+p)" })
+vim.keymap.set("n", "<leader>P", "\"+P", { desc = "Paste from clipboard (\"+P)" })
 vim.keymap.set("v", "P", "\"+p", { desc = "Pastw from clipboard" })
 vim.keymap.set("v", "Y", "\"+y", { desc = "Yank to clipboard" })
 
