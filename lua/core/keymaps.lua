@@ -47,8 +47,8 @@ vim.keymap.set("n", "<leader>e", vim.diagnostic.open_float, { desc = "Open float
 vim.keymap.set("n", "<leader>q", vim.diagnostic.setloclist, { desc = "Open diagnostics list" })
 
 -- W Keybinds
-vim.keymap.set("n", "<leader>wv", "<C-w>v",{ desc = "Split vertically" })
-vim.keymap.set("n", "<leader>ws", "<C-w>s",{ desc = "Split window" })
+vim.keymap.set("n", "<leader>wv", "<C-w>v<C-w>l",{ desc = "Split vertically" })
+vim.keymap.set("n", "<leader>ws", "<C-w>s<C-w>j",{ desc = "Split window" })
 vim.keymap.set("n", "<leader>wo", "<C-w>o",{ desc = "Close all [O]ther windows" })
 -- Move in windows
 vim.keymap.set("n", "<leader>wh", "<C-w>h", { desc = "Switch to left window" })
