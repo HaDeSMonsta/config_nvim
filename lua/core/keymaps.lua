@@ -55,3 +55,6 @@ vim.keymap.set("n", "<leader>wh", "<C-w>h", { desc = "Switch to left window" })
 vim.keymap.set("n", "<leader>wj", "<C-w>j", { desc = "Switch to lower window" })
 vim.keymap.set("n", "<leader>wk", "<C-w>k", { desc = "Switch to upper window" })
 vim.keymap.set("n", "<leader>wl", "<C-w>l", { desc = "Switch to right window" })
+
+-- Exit termonal with Esc
+vim.keymap.set("t", "<Esc>", "<C-\\><C-n>")
