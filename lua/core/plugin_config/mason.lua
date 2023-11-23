@@ -28,7 +28,7 @@ local servers = {
 -- Scala metals
 local nvim_metals_group = vim.api.nvim_create_augroup("nvim_metals", { clear = true })
 vim.api.nvim_create_autocmd("fileType", {
-  pattern = { "scala", "sbt", "java" },
+  pattern = { "scala", "sbt" }, -- Removed Java, because currently it doesn't work
   callback = function ()
     require("metals").initialize_or_attach({})
   end,
