@@ -141,7 +141,7 @@ local plugins = {
     dependencies = {
       "nvim-lua/plenary.nvim",
     },
-    version = "^2",
+    version = "^3",
     ft = { "haskell", "lhaskell", "cabal", "cabalproject" },
   },
 
