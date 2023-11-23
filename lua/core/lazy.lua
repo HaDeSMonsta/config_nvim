@@ -141,7 +141,7 @@ local plugins = {
     dependencies = {
       "nvim-lua/plenary.nvim",
     },
-    version = "^3", -- until Update, set this resolver url in stack. yaml "https://raw.githubusercontent.com/commercialhaskell/stackage-snapshots/master/lts/21/17.yaml"
+    version = "^3", -- until Update, set this number before the .yaml in stack.yaml < 22 "https://raw.githubusercontent.com/commercialhaskell/stackage-snapshots/master/lts/21/21.yaml"
     ft = { "haskell", "lhaskell", "cabal", "cabalproject" },
   },
 
