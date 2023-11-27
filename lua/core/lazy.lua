@@ -183,9 +183,6 @@ local plugins = {
   "nvim-tree/nvim-tree.lua",
   "nvim-tree/nvim-web-devicons",
 
-  -- Cobol LSP
-  "jamesnvc/lsp_server",
-
   -- Auto complete
   {
     "hrsh7th/nvim-cmp",
