@@ -59,3 +59,7 @@ vim.keymap.set("n", "<leader>wl", "<C-w>l", { desc = "Switch to right window" })
 
 -- Exit termonal with Esc
 vim.keymap.set("t", "<Esc>", "<C-\\><C-n>")
+
+-- Exit from insert even in autocomplete
+-- vim.keymap.set("i", "<Esc>", "<Esc><Esc>")
+-- Doesn't work as intendet
