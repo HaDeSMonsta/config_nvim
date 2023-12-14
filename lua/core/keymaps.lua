@@ -5,6 +5,7 @@ vim.g.maplocalleader = " "
 -- Open stuff
 vim.keymap.set("n", "<leader>oe", vim.cmd.Ex, { desc = "[O]pen [E]xplorer" })
 vim.keymap.set("n", "<leader>ot", vim.cmd.term, { desc = "[O]pen [T]erminal" })
+vim.keymap.set("n", "<leader>ow", "<C-w>s<C-w>j<C-w>12-", { desc = "[O]pen [W]indow (-12)" })
 
 -- Make double quotes and braces
 vim.keymap.set("i", "\'", "\'\'<left>")
