@@ -197,7 +197,19 @@ local plugins = {
       -- Adds a number of user-friendly snippets
       "rafamadriz/friendly-snippets",
     },
-  }
+  },
+
+  -- Refactoring
+  {
+    "ThePrimeagen/refactoring.nvim",
+    dependencies = {
+      "nvim-lua/plenary.nvim",
+      "nvim-treesitter/nvim-treesitter",
+    },
+    config = function()
+      require("refactoring").setup()
+    end,
+  },
 }
 
 local opts = {}
