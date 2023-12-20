@@ -207,9 +207,36 @@ local plugins = {
       "nvim-treesitter/nvim-treesitter",
     },
     config = function()
-      require("refactoring").setup()
+      require("refactoring").setup({ -- Currently default config
+    prompt_func_return_type = {
+        go = false,
+        java = false,
+
+        cpp = false,
+        c = false,
+        h = false,
+        hpp = false,
+        cxx = false,
+    },
+    prompt_func_param_type = {
+        go = false,
+        java = false,
+
+        cpp = false,
+        c = false,
+        h = false,
+        hpp = false,
+        cxx = false,
+    },
+    printf_statements = {},
+    print_var_statements = {},
+})
     end,
   },
+
+  -- Auto write every change
+  -- Helpful for Rust + Bacon
+  "beauwilliams/AutoWrite.vim",
 }
 
 local opts = {}

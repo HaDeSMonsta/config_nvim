@@ -7,13 +7,14 @@ vim.keymap.set("n", "<leader>oe", vim.cmd.Ex, { desc = "[O]pen [E]xplorer" })
 vim.keymap.set("n", "<leader>ot", vim.cmd.term, { desc = "[O]pen [T]erminal" })
 vim.keymap.set("n", "<leader>ow", "<C-w>s<C-w>j<C-w>12-", { desc = "[O]pen [W]indow (-12)" })
 
--- Make double quotes and braces
+-- Make double characters
 vim.keymap.set("i", "\'", "\'\'<left>")
 vim.keymap.set("i", "\"", "\"\"<left>")
 vim.keymap.set("i", "`", "``<left>")
 vim.keymap.set("i", "(", "()<left>")
 vim.keymap.set("i", "{", "{}<left>")
 vim.keymap.set("i", "[", "[]<left>")
+vim.keymap.set("i", "<", "<><left>")
 
 -- Center display after jump 
 vim.keymap.set("n", "<C-d>", "<C-d>zz")
@@ -64,3 +65,7 @@ vim.keymap.set("t", "<Esc>", "<C-\\><C-n>")
 -- Exit from insert even in autocomplete
 -- vim.keymap.set("i", "<Esc>", "<Esc><Esc>")
 -- Doesn't work as intendet
+
+-- Start/stop autowrite
+vim.keymap.set("n", "<leader>ae", ":AutoWriteEnable<Cr>", { desc = "[A]utowrite [E]nable", silent = true })
+vim.keymap.set("n", "<leader>ad", ":AutoWriteDisable<Cr>", { desc = "[A]utowrite [D]isable", silent = true })
