@@ -2,6 +2,15 @@
 vim.g.mapleader = " "
 vim.g.maplocalleader = " "
 
+-- Security, I guess (?)
+vim.keymap.set("n", "Q", "<Nop>")
+-- Another type of safety, I guess
+vim.keymap.set("i", "<C-c>", "<Esc>")
+-- Disable leader key (also safety?)
+vim.keymap.set({ "n" }, "<leader>", "<Nop>", { silent = true })
+-- Disable visual mode after leader
+vim.keymap.set("n", "<leader>v", "<Nop>")
+
 -- Open stuff
 vim.keymap.set("n", "<leader>oe", vim.cmd.Ex, { desc = "[O]pen [E]xplorer" })
 vim.keymap.set("n", "<leader>ot", vim.cmd.term, { desc = "[O]pen [T]erminal" })
@@ -29,13 +38,6 @@ vim.keymap.set("n", "<leader>p", "\"+p", { desc = "Paste from clipboard (\"+p)" 
 vim.keymap.set("n", "<leader>P", "\"+P", { desc = "Paste from clipboard (\"+P)" })
 vim.keymap.set("v", "P", "\"+p", { desc = "Pastw from clipboard" })
 vim.keymap.set("v", "Y", "\"+y", { desc = "Yank to clipboard" })
-
--- Security, I guess (?)
-vim.keymap.set("n", "Q", "<Nop>")
--- Another type of safety, I guess
-vim.keymap.set("i", "<C-c>", "<Esc>")
--- Disable leader key (also safety?)
-vim.keymap.set({ "n" }, "<leader>", "<Nop>", { silent = true })
 
 -- If there is no number before the j/k in wrapped lines it will go up and down in those
 -- if we have a count it will jump to the position with the appropriate relative line number 
