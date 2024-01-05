@@ -74,7 +74,7 @@ vim.keymap.set("n", "<leader>ad", ":AutoWriteDisable<Cr>", { desc = "[A]utowrite
 
 -- Git
 vim.keymap.set("n", "<leader>gp", ":Git push<Cr>", { desc = "[G]it [P]ush", silent = true })
-vim.keymap.set("n", "<leader>gc", ":Git commit -a<Cr>", { desc = "[G]it [C]ommit -a", silent = true })
+vim.keymap.set("n", "<leader>gc", ":wa<Cr>:Git commit -a<Cr>", { desc = "[G]it [C]ommit -a (:wa)", silent = true })
 vim.keymap.set("n", "<leader>gz", ":Git zieh<Cr>", { desc = "[G]it [Z]ieh (pull)", silent = true })
 vim.keymap.set("n", "<leader>ga", ":Git add -A<Cr>", { desc = "[G]it [A]dd -A", silent = true })
 vim.keymap.set("n", "<leader>gs", vim.cmd.Git, { desc = "Open [G]it [S]tatus" })
