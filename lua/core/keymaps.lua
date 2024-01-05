@@ -71,3 +71,17 @@ vim.keymap.set("t", "<Esc>", "<C-\\><C-n>")
 -- Start/stop autowrite
 vim.keymap.set("n", "<leader>ae", ":AutoWriteEnable<Cr>", { desc = "[A]utowrite [E]nable", silent = true })
 vim.keymap.set("n", "<leader>ad", ":AutoWriteDisable<Cr>", { desc = "[A]utowrite [D]isable", silent = true })
+
+-- Git
+vim.keymap.set("n", "<leader>gp", ":Git push<Cr>", { desc = "[G]it [P]ush", silent = true })
+vim.keymap.set("n", "<leader>gc", ":Git commit -a<Cr>", { desc = "[G]it [C]ommit -a", silent = true })
+vim.keymap.set("n", "<leader>gz", ":Git zieh<Cr>", { desc = "[G]it [Z]ieh (pull)", silent = true })
+vim.keymap.set("n", "<leader>ga", ":Git add -A<Cr>", { desc = "[G]it [A]dd -A", silent = true })
+vim.keymap.set("n", "<leader>gs", vim.cmd.Git, { desc = "Open [G]it [S]tatus" })
+
+-- nvimTree
+vim.keymap.set("n", "<leader>tt", ":NvimTreeToggle<cr>", { desc = "[T]ree [T]oggle", silent = true  })
+vim.keymap.set("n", "<leader>tf", ":NvimTreeFocus<cr>", { desc = "[T]ree [F]ocus", silent = true  })
+vim.keymap.set("n", "<leader>tca", ":NvimTreeCollapse<cr>", { desc = "[T]ree [C]ollapse [A]ll", silent = true })
+vim.keymap.set("n", "<leader>tck", ":NvimTreeCollapseKeepBuffers<cr>", { desc = "[T]ree [C]ollapse [K]eep current buffer", silent = true  }) -- Doesn't realy work, maybe remove'
+vim.keymap.set("n", "<leader>tr", ":NvimTreeRefresh<cr>", { desc = "[T]ree [R]efresh", silent = true  })

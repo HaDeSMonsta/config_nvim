@@ -67,7 +67,7 @@ local plugins = {
 		    changedelete = { text = "~" },
 	    },
 	    on_attach = function(bufnr)
-		    vim.keymap.set("n", "<leader>hp", require("gitsigns").preview_hunk, { buffer = bufnr, desc = "Preview git hunk" })
+		    vim.keymap.set("n", "<leader>gh", require("gitsigns").preview_hunk, { buffer = bufnr, desc = "Preview [G]it [H]unk" })
 
 		    -- Don't override build in and fugitive keymaps
 		    local gs = package.loaded.gitsigns
