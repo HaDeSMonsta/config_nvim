@@ -7,7 +7,7 @@ vim.keymap.set("n", "Q", "<Nop>")
 -- Another type of safety, I guess
 vim.keymap.set("i", "<C-c>", "<Esc>")
 -- Disable leader key (also safety?)
-vim.keymap.set({ "n" }, "<leader>", "<Nop>", { silent = true })
+vim.keymap.set("n", "<leader>", "<Nop>", { silent = true })
 -- Disable visual mode after leader
 vim.keymap.set("n", "<leader>v", "<Nop>")
 
@@ -17,13 +17,13 @@ vim.keymap.set("n", "<leader>ot", vim.cmd.term, { desc = "[O]pen [T]erminal" })
 vim.keymap.set("n", "<leader>ow", "<C-w>s<C-w>j<C-w>12-", { desc = "[O]pen [W]indow (-12)" })
 
 -- Make double characters
-vim.keymap.set("i", "\'", "\'\'<left>")
-vim.keymap.set("i", "\"", "\"\"<left>")
-vim.keymap.set("i", "`", "``<left>")
-vim.keymap.set("i", "(", "()<left>")
-vim.keymap.set("i", "{", "{}<left>")
-vim.keymap.set("i", "[", "[]<left>")
-vim.keymap.set("i", "<", "<><left>")
+vim.keymap.set({ "i", "t" }, "\'", "\'\'<left>")
+vim.keymap.set({ "i", "t" }, "\"", "\"\"<left>")
+vim.keymap.set({ "i", "t" }, "`", "``<left>")
+vim.keymap.set({ "i", "t" }, "(", "()<left>")
+vim.keymap.set({ "i", "t" }, "{", "{}<left>")
+vim.keymap.set({ "i", "t" }, "[", "[]<left>")
+vim.keymap.set({ "i", "t" }, "<", "<><left>")
 
 -- Center display after jump 
 vim.keymap.set("n", "<C-d>", "<C-d>zz")
