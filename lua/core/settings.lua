@@ -5,7 +5,7 @@ vim.wo.number = true
 vim.wo.relativenumber = true
 
 -- Make cursor big in insert mode
-vim.opt["guicursor"] = ""
+-- vim.opt["guicursor"] = ""
 
 -- Don't have less than 8 lines space to the border
 vim.opt.scrolloff = 8
