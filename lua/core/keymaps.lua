@@ -1,3 +1,8 @@
+-- Define opts for all maps
+function OPTS(description)
+    return { desc = description, silent = true }
+end
+
 -- Set leader to space
 vim.g.mapleader = " "
 vim.g.maplocalleader = " "
@@ -78,10 +83,3 @@ vim.keymap.set("n", "<leader>gc", ":wa<Cr>:Git commit -a<Cr>", { desc = "[G]it [
 vim.keymap.set("n", "<leader>gz", ":Git zieh<Cr>", { desc = "[G]it [Z]ieh (pull)", silent = true })
 vim.keymap.set("n", "<leader>ga", ":Git add -A<Cr>", { desc = "[G]it [A]dd -A", silent = true })
 vim.keymap.set("n", "<leader>gs", vim.cmd.Git, { desc = "Open [G]it [S]tatus" })
-
--- nvimTree
-vim.keymap.set("n", "<leader>tt", ":NvimTreeToggle<cr>", { desc = "[T]ree [T]oggle", silent = true  })
-vim.keymap.set("n", "<leader>tf", ":NvimTreeFocus<cr>", { desc = "[T]ree [F]ocus", silent = true  })
-vim.keymap.set("n", "<leader>tca", ":NvimTreeCollapse<cr>", { desc = "[T]ree [C]ollapse [A]ll", silent = true })
-vim.keymap.set("n", "<leader>tck", ":NvimTreeCollapseKeepBuffers<cr>", { desc = "[T]ree [C]ollapse [K]eep current buffer", silent = true  }) -- Doesn't realy work, maybe remove'
-vim.keymap.set("n", "<leader>tr", ":NvimTreeRefresh<cr>", { desc = "[T]ree [R]efresh", silent = true  })

@@ -1,4 +1,18 @@
-require("nvim-tree").setup()
+local function my_on_attach_hm(bufnr)
+  local api = require "nvim-tree.api"
+
+  api.config.mappings.default_on_attach(bufnr)
+  vim.keymap.set("n", "<leader>ti", api.tree.toggle_gitignore_filter, { desc = "", silent = true })
+  vim.keymap.set("n", "<leader>tt", ":NvimTreeToggle<cr>", { desc = "[T]ree [T]oggle", silent = true  })
+  vim.keymap.set("n", "<leader>tf", ":NvimTreeFocus<cr>", { desc = "[T]ree [F]ocus", silent = true  })
+  vim.keymap.set("n", "<leader>tca", ":NvimTreeCollapse<cr>", { desc = "[T]ree [C]ollapse [A]ll", silent = true })
+  vim.keymap.set("n", "<leader>tck", ":NvimTreeCollapseKeepBuffers<cr>", { desc = "[T]ree [C]ollapse [K]eep current buffer", silent = true  }) -- Doesn't realy work, maybe remove'
+  vim.keymap.set("n", "<leader>tr", ":NvimTreeRefresh<cr>", { desc = "[T]ree [R]efresh", silent = true })
+end
+
+require("nvim-tree").setup {
+    on_attach = my_on_attach_hm,
+}
 
 require("nvim-web-devicons").setup({
  -- your personnal icons can go here (to override)
@@ -40,5 +54,11 @@ require("nvim-web-devicons").setup({
     color = "#81e043",
     name = "Log"
   }
+ };
+
+ -- Show gitignored files
+ -- Which does not work
+ filters = {
+     git_ignored = false,
  };
 })
