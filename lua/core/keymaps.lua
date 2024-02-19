@@ -73,6 +73,9 @@ vim.keymap.set("t", "<Esc>", "<C-\\><C-n>")
 -- vim.keymap.set("i", "<Esc>", "<Esc><Esc>")
 -- Doesn't work as intendet
 
+-- Open lazy manager
+vim.keymap.set("n", "<leader>l", ":Lazy<Cr>", OPTS("Open Lazy"))
+
 -- Start/stop autowrite
 vim.keymap.set("n", "<leader>ae", ":AutoWriteEnable<Cr>", { desc = "[A]utowrite [E]nable", silent = true })
 vim.keymap.set("n", "<leader>ad", ":AutoWriteDisable<Cr>", { desc = "[A]utowrite [D]isable", silent = true })
