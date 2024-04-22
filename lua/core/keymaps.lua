@@ -22,13 +22,13 @@ vim.keymap.set("n", "<leader>ot", vim.cmd.term, { desc = "[O]pen [T]erminal" })
 vim.keymap.set("n", "<leader>ow", "<C-w>s<C-w>j<C-w>12-", { desc = "[O]pen [W]indow (-12)" })
 
 -- Make double characters
-vim.keymap.set({ "i", "t" }, "\'", "\'\'<left>")
-vim.keymap.set({ "i", "t" }, "\"", "\"\"<left>")
-vim.keymap.set({ "i", "t" }, "`", "``<left>")
-vim.keymap.set({ "i", "t" }, "(", "()<left>")
-vim.keymap.set({ "i", "t" }, "{", "{}<left>")
-vim.keymap.set({ "i", "t" }, "[", "[]<left>")
-vim.keymap.set({ "i", "t" }, "<", "<><left>")
+-- vim.keymap.set({ "i", "t" }, "\'", "\'\'<left>")
+-- vim.keymap.set({ "i", "t" }, "\"", "\"\"<left>")
+-- vim.keymap.set({ "i", "t" }, "`", "``<left>")
+-- vim.keymap.set({ "i", "t" }, "(", "()<left>")
+-- vim.keymap.set({ "i", "t" }, "{", "{}<left>")
+-- vim.keymap.set({ "i", "t" }, "[", "[]<left>")
+-- vim.keymap.set({ "i", "t" }, "<", "<><left>")
 
 -- Center display after jump 
 vim.keymap.set("n", "<C-d>", "<C-d>zz")

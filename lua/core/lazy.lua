@@ -13,15 +13,24 @@ vim.opt.rtp:prepend(lazypath)
 
 local plugins = {
     -- Theme
+--    {
+--        "baliestri/aura-theme",
+--        lazy = false,
+--        priority = 1000,
+--        config = function(plugin)
+--            vim.opt.rtp:append(plugin.dir .. "/packages/neovim")
+--            vim.cmd([[colorscheme aura-dark]])
+--        end
+--    },
+
     {
-    "baliestri/aura-theme",
-    lazy = false,
-    priority = 1000,
-    config = function(plugin)
-      vim.opt.rtp:append(plugin.dir .. "/packages/neovim")
-      vim.cmd([[colorscheme aura-dark]])
-    end
-  },
+        -- Theme inspired by Atom
+        'navarasu/onedark.nvim',
+        priority = 1000,
+        config = function()
+            vim.cmd.colorscheme 'onedark'
+        end,
+    },
 
   -- Fuzzy Finder (files, lsp, etc)
   {
