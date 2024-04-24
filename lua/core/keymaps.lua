@@ -81,8 +81,9 @@ vim.keymap.set("n", "<leader>ae", ":AutoWriteEnable<Cr>", { desc = "[A]utowrite 
 vim.keymap.set("n", "<leader>ad", ":AutoWriteDisable<Cr>", { desc = "[A]utowrite [D]isable", silent = true })
 
 -- Git
-vim.keymap.set("n", "<leader>gp", ":Git push<Cr>", { desc = "[G]it [P]ush", silent = true })
-vim.keymap.set("n", "<leader>gc", ":wa<Cr>:Git commit -a<Cr>", { desc = "[G]it [C]ommit -a", silent = true })
-vim.keymap.set("n", "<leader>gz", ":Git zieh<Cr>", { desc = "[G]it [Z]ieh (pull)", silent = true })
-vim.keymap.set("n", "<leader>ga", ":Git add -A<Cr>", { desc = "[G]it [A]dd -A", silent = true })
-vim.keymap.set("n", "<leader>gs", vim.cmd.Git, { desc = "Open [G]it [S]tatus" })
+vim.keymap.set("n", "<leader>gz", ":Git pull<Cr>", OPTS("[G]it [Z]ieh (pull)"))
+vim.keymap.set("n", "<leader>ga", ":Git add -A<Cr>", OPTS("[G]it [A]dd -A"))
+vim.keymap.set("n", "<leader>gc", ":Git commit -a<Cr>", OPTS("[G]it [C]ommit -a"))
+vim.keymap.set("n", "<leader>gp", ":Git push<Cr>", OPTS("[G]it [P]ush"))
+-- vim.keymap.set("n", "<leader>ge", ":Git add -A<Cr>:Git commit -a<CR>:Git push<CR>", { desc = "[G]it [E]verything (add, commit && push)", silent = true })
+vim.keymap.set("n", "<leader>gs", vim.cmd.Git, OPTS("[G]it [S]tatus"))
