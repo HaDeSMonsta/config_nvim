@@ -17,9 +17,9 @@ vim.keymap.set("n", "<leader>", "<Nop>", { silent = true })
 vim.keymap.set("n", "<leader>v", "<Nop>")
 
 -- Open stuff
-vim.keymap.set("n", "<leader>oe", vim.cmd.Ex, { desc = "[O]pen [E]xplorer" })
-vim.keymap.set("n", "<leader>ot", vim.cmd.term, { desc = "[O]pen [T]erminal" })
-vim.keymap.set("n", "<leader>ow", "<C-w>s<C-w>j<C-w>12-", { desc = "[O]pen [W]indow (-12)" })
+vim.keymap.set("n", "<leader>oe", vim.cmd.Ex, OPTS("[O]pen [E]xplorer"))
+vim.keymap.set("n", "<leader>ot", vim.cmd.term, OPTS("[O]pen [T]erminal"))
+vim.keymap.set("n", "<leader>ow", "<C-w>s<C-w>j<C-w>12-", OPTS("[O]pen [W]indow (-12)"))
 vim.keymap.set("n", "<leader>ost", "<C-w>s<C-w>j<C-w>12-:term<CR>", OPTS("[O]pen [S]mall [T]erminal"))
 
 -- Make double characters
