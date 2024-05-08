@@ -22,6 +22,11 @@ vim.keymap.set("n", "<leader>ot", vim.cmd.term, OPTS("[O]pen [T]erminal"))
 vim.keymap.set("n", "<leader>ow", "<C-w>s<C-w>j<C-w>12-", OPTS("[O]pen [W]indow (-12)"))
 vim.keymap.set("n", "<leader>ost", "<C-w>s<C-w>j<C-w>12-:term<CR>", OPTS("[O]pen [S]mall [T]erminal"))
 
+-- Open lazy manager
+vim.keymap.set("n", "<leader>ol", ":Lazy<Cr>", OPTS("[O]pen [L]azy"))
+-- Open mason
+vim.keymap.set("n", "<leader>om", ":Mason<Cr>", OPTS("[O]pen [M]ason"))
+
 -- Make double characters
 -- vim.keymap.set({ "i", "t" }, "\'", "\'\'<left>")
 -- vim.keymap.set({ "i", "t" }, "\"", "\"\"<left>")
@@ -73,11 +78,6 @@ vim.keymap.set("t", "<Esc>", "<C-\\><C-n>")
 -- Exit from insert even in autocomplete
 -- vim.keymap.set("i", "<Esc>", "<Esc><Esc>")
 -- Doesn't work as intendet
-
--- Open lazy manager
-vim.keymap.set("n", "<leader>l", ":Lazy<Cr>", OPTS("Open Lazy"))
--- Open mason
-vim.keymap.set("n", "<leader>m", ":Mason<Cr>", OPTS("Open Mason"))
 
 -- Start/stop autowrite
 vim.keymap.set("n", "<leader>ae", ":AutoWriteEnable<Cr>", { desc = "[A]utowrite [E]nable", silent = true })
