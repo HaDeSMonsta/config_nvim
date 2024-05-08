@@ -75,6 +75,8 @@ vim.keymap.set("t", "<Esc>", "<C-\\><C-n>")
 
 -- Open lazy manager
 vim.keymap.set("n", "<leader>l", ":Lazy<Cr>", OPTS("Open Lazy"))
+-- Open mason
+vim.keymap.set("n", "<leader>m", ":Mason<Cr>", OPTS("Open Mason"))
 
 -- Start/stop autowrite
 vim.keymap.set("n", "<leader>ae", ":AutoWriteEnable<Cr>", { desc = "[A]utowrite [E]nable", silent = true })

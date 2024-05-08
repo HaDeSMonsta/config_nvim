@@ -6,7 +6,7 @@ local function my_on_attach_hm(bufnr)
   vim.keymap.set("n", "<leader>tf", ":NvimTreeFocus<cr>", OPTS("[T]ree [F]ocus"))
   vim.keymap.set("n", "<leader>tca", ":NvimTreeCollapse<cr>", OPTS("[T]ree [C]ollapse [A]ll"))
   vim.keymap.set("n", "<leader>tck", ":NvimTreeCollapseKeepBuffers<cr>", OPTS("[T]ree [C]ollapse [K]eep current buffer")) -- Doesn't realy work, maybe remove'
-  vim.keymap.set("n", "<leader>tr", ":NvimTreeRefresh<cr>", OPTS("[T]ree [R]efresh"))
+  vim.keymap.set("n", "<leader>tr", "<C-]>", OPTS("[T]ree change [R]oot")) -- CTRL + ] works, bit keymap not
   vim.keymap.set("n", "<leader>ti", api.tree.toggle_gitignore_filter, OPTS("[T]ree tiggle git[I]gnored files"))
 end
 
