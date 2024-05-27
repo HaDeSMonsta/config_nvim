@@ -84,9 +84,10 @@ vim.keymap.set("n", "<leader>ae", ":AutoWriteEnable<Cr>", { desc = "[A]utowrite 
 vim.keymap.set("n", "<leader>ad", ":AutoWriteDisable<Cr>", { desc = "[A]utowrite [D]isable", silent = true })
 
 -- Git
-vim.keymap.set("n", "<leader>gpl", ":Git pull<Cr>", OPTS("[G]it [P]ull"))
 vim.keymap.set("n", "<leader>ga", ":Git add -A<Cr>", OPTS("[G]it [A]dd -A"))
 vim.keymap.set("n", "<leader>gc", ":Git commit -a<Cr>", OPTS("[G]it [C]ommit -a"))
 vim.keymap.set("n", "<leader>gps", ":Git push<Cr>", OPTS("[G]it [P]ush"))
+vim.keymap.set("n", "<leader>gpl", ":Git pull<Cr>", OPTS("[G]it [P]ull"))
 -- vim.keymap.set("n", "<leader>ge", ":Git add -A<Cr>:Git commit -a<CR>:Git push<CR>", { desc = "[G]it [E]verything (add, commit && push)", silent = true })
 vim.keymap.set("n", "<leader>gs", vim.cmd.Git, OPTS("[G]it [S]tatus"))
+vim.keymap.set("n", "<leader>gd", ":Git diff<CR>", OPTS("[G]it [D]iff"))
