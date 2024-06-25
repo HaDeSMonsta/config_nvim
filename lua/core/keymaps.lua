@@ -72,7 +72,7 @@ vim.keymap.set("n", "<leader>wj", "<C-w>j", { desc = "Switch to lower window" })
 vim.keymap.set("n", "<leader>wk", "<C-w>k", { desc = "Switch to upper window" })
 vim.keymap.set("n", "<leader>wl", "<C-w>l", { desc = "Switch to right window" })
 
--- Exit termonal with Esc
+-- Exit terminal with Esc
 vim.keymap.set("t", "<Esc>", "<C-\\><C-n>")
 
 -- Exit from insert even in autocomplete
@@ -91,3 +91,5 @@ vim.keymap.set("n", "<leader>gpl", ":Git pull<Cr>", OPTS("[G]it [P]ull"))
 -- vim.keymap.set("n", "<leader>ge", ":Git add -A<Cr>:Git commit -a<CR>:Git push<CR>", { desc = "[G]it [E]verything (add, commit && push)", silent = true })
 vim.keymap.set("n", "<leader>gs", vim.cmd.Git, OPTS("[G]it [S]tatus"))
 vim.keymap.set("n", "<leader>gd", ":Git diff<CR>", OPTS("[G]it [D]iff"))
+
+vim.keymap.set("n", "<leader>ra", ":%s/", { desc = "[R]eplace [A]ll" })
