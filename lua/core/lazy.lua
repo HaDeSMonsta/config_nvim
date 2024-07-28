@@ -210,42 +210,45 @@ local plugins = {
 
   -- Refactoring
   {
-    "ThePrimeagen/refactoring.nvim",
-    dependencies = {
-      "nvim-lua/plenary.nvim",
-      "nvim-treesitter/nvim-treesitter",
-    },
-    config = function()
-      require("refactoring").setup({ -- Currently default config
-    prompt_func_return_type = {
-        go = false,
-        java = false,
+      "ThePrimeagen/refactoring.nvim",
+      dependencies = {
+          "nvim-lua/plenary.nvim",
+          "nvim-treesitter/nvim-treesitter",
+      },
+      config = function()
+          require("refactoring").setup({ -- Currently default config
+              prompt_func_return_type = {
+                  go = false,
+                  java = false,
 
-        cpp = false,
-        c = false,
-        h = false,
-        hpp = false,
-        cxx = false,
-    },
-    prompt_func_param_type = {
-        go = false,
-        java = false,
+                  cpp = false,
+                  c = false,
+                  h = false,
+                  hpp = false,
+                  cxx = false,
+              },
+              prompt_func_param_type = {
+                  go = false,
+                  java = false,
 
-        cpp = false,
-        c = false,
-        h = false,
-        hpp = false,
-        cxx = false,
-    },
-    printf_statements = {},
-    print_var_statements = {},
-})
-    end,
+                  cpp = false,
+                  c = false,
+                  h = false,
+                  hpp = false,
+                  cxx = false,
+              },
+              printf_statements = {},
+              print_var_statements = {},
+              show_success_message = false,
+          })
+      end,
   },
 
-  -- Auto write every change
-  -- Helpful for Rust + Bacon
-  "beauwilliams/AutoWrite.vim",
+  {
+      -- Auto write every change
+      -- Helpful for Rust + Bacon
+      "beauwilliams/AutoWrite.vim",
+  }
 }
 
 local opts = {}
