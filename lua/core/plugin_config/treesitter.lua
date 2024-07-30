@@ -8,11 +8,19 @@ require"nvim-treesitter.configs".setup {
   -- Install parsers synchronously (only applied to `ensure_installed`)
   sync_install = false,
 
+  -- if those lines are removed, the LSP complains
+  ignore_install = {},
+  modules = {},
+
   -- Automatically install missing parsers when entering buffer
   -- Recommendation: set to false if you don't have `tree-sitter` CLI installed locally
   auto_install = true,
 
-  highlight = { enable = true, additional_vim_regex_highlighting = false },
+  highlight = {
+      enable = true,
+      disable = { "just" }, -- use vim-just
+      additional_vim_regex_highlighting = false,
+  },
   -- indent = { enable = true }, -- don't, it's annoying and inconsistent
   incremental_selection = {
     enable = true,

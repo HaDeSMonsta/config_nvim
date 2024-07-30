@@ -248,7 +248,12 @@ local plugins = {
       -- Auto write every change
       -- Helpful for Rust + Bacon
       "beauwilliams/AutoWrite.vim",
-  }
+  },
+
+  {
+      "NoahTheDuke/vim-just",
+      ft = { "just" },
+  },
 }
 
 local opts = {}
