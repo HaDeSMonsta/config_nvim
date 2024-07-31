@@ -13,4 +13,5 @@ require("which-key").register {
   ["<leader>o"] = { name = "[O]pen", _ = "which_key_ignore" },
   ["<leader>os"] = { name = "[O]pen [S]mall", _ = "which_key_ignore" },
   ["<leader>a"] = { name = "[A]utowrite", _ = "which_key_ignore" },
+  ["<leader>f"] = { name = "[F]iletype", _ = "which_key_ignore" },
 }

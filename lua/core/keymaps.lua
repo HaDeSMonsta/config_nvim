@@ -93,3 +93,5 @@ vim.keymap.set("n", "<leader>gs", vim.cmd.Git, OPTS("[G]it [S]tatus"))
 vim.keymap.set("n", "<leader>gd", ":Git diff<CR>", OPTS("[G]it [D]iff"))
 
 vim.keymap.set("n", "<leader>ra", ":%s/", { desc = "[R]eplace [A]ll" })
+
+vim.keymap.set("n", "<leader>ff", ":setfiletype fish<Cr>", OPTS("Set [F]iletype [F]ish"))
