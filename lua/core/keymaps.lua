@@ -2,6 +2,9 @@
 function OPTS(description)
     return { desc = description, silent = true }
 end
+local function cmd(command)
+	return string.format(":%s<CR>", command)
+end
 
 -- Set leader to space
 vim.g.mapleader = " "
@@ -91,6 +94,7 @@ vim.keymap.set("n", "<leader>gpl", ":Git pull<Cr>", OPTS("[G]it [P]ull"))
 -- vim.keymap.set("n", "<leader>ge", ":Git add -A<Cr>:Git commit -a<CR>:Git push<CR>", { desc = "[G]it [E]verything (add, commit && push)", silent = true })
 vim.keymap.set("n", "<leader>gs", vim.cmd.Git, OPTS("[G]it [S]tatus"))
 vim.keymap.set("n", "<leader>gd", ":Git diff<CR>", OPTS("[G]it [D]iff"))
+vim.keymap.set("n", "<leader>gb", cmd("GitBlameToggle"), OPTS("[G]it [B]lame"))
 
 vim.keymap.set("n", "<leader>ra", ":%s/", { desc = "[R]eplace [A]ll" })
 

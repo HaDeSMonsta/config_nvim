@@ -254,6 +254,17 @@ local plugins = {
       "NoahTheDuke/vim-just",
       ft = { "just" },
   },
+
+  {
+	  "f-person/git-blame.nvim",
+	  event = "VeryLazy",
+	  opts = {
+		  enabled = false, -- to have it enabled by default
+		  message_template = " <summary> • <date> • <author> • <<sha>>",
+		  date_format = "%Y-%m-%d %H:%M:%S",
+		  virtual_text_column = 1,
+	  },
+  },
 }
 
 local opts = {}
