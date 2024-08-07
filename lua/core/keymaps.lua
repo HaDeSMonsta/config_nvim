@@ -95,3 +95,4 @@ vim.keymap.set("n", "<leader>gd", ":Git diff<CR>", OPTS("[G]it [D]iff"))
 vim.keymap.set("n", "<leader>ra", ":%s/", { desc = "[R]eplace [A]ll" })
 
 vim.keymap.set("n", "<leader>ff", ":setfiletype fish<Cr>", OPTS("Set [F]iletype [F]ish"))
+vim.keymap.set("n", "<leader>ft", ":setfiletype terraform<Cr>", OPTS("Set [F]iletype [T]erraform"))
