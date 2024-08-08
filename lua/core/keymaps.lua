@@ -58,6 +58,10 @@ vim.keymap.set("v", "Y", "\"+y", { desc = "Yank to clipboard" })
 vim.keymap.set("n", "k", "v:count == 0 ? 'gk' : 'k'", { expr = true, silent = true })
 vim.keymap.set("n", "j", "v:count == 0 ? 'gj' : 'j'", { expr = true, silent = true })
 
+-- Add newlines in normal mode
+vim.keymap.set("n", "<CR>", "@='m`o<C-V><Esc>``'<CR>")
+-- vim.keymap.set("n", "<S-CR>", "@='m`O<C-V><Esc>``'<CR>") -- Removed because nvim recognized <S-CR> as <CR>
+
 -- Diagnostic keymaps
 -- Either the last two don't work, or I don't know how (which is probably the reason)
 vim.keymap.set("n", "[d", vim.diagnostic.goto_prev, { desc = "Go to previous diagnostic message" })
