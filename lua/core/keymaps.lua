@@ -102,5 +102,11 @@ vim.keymap.set("n", "<leader>gb", cmd("GitBlameToggle"), OPTS("[G]it [B]lame"))
 
 vim.keymap.set("n", "<leader>ra", ":%s/", { desc = "[R]eplace [A]ll" })
 
-vim.keymap.set("n", "<leader>ff", ":setfiletype fish<Cr>", OPTS("Set [F]iletype [F]ish"))
-vim.keymap.set("n", "<leader>ft", ":setfiletype terraform<Cr>", OPTS("Set [F]iletype [T]erraform"))
+-- Set file types
+vim.keymap.set("n", "<leader>ff", cmd("setfiletype fish"), OPTS("Set [F]iletype [F]ish"))
+vim.keymap.set("n", "<leader>ft", cmd("setfiletype terraform"), OPTS("Set [F]iletype [T]erraform"))
+
+-- Saving file with sudo
+-- https://stackoverflow.com/a/7078429/20766205
+vim.keymap.set("n", "<leader>ss", cmd("w sudo tee > /dev/null %"), OPTS("[S]afe as [S]udo"))
+
