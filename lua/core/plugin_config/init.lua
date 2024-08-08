@@ -7,3 +7,4 @@ require("core.plugin_config.nvimTree")
 require("core.plugin_config.comment")
 require("core.plugin_config.cmp")
 require("core.plugin_config.refactor")
+

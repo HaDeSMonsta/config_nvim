@@ -6,3 +6,4 @@ require("core.macros")
 require("core.docKeymaps")
 
 require("core.plugin_config")
+

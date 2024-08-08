@@ -10,3 +10,4 @@ vim.keymap.set("n", "<C-h>", function() ui.nav_file(1) end, { desc = "Jump to ha
 vim.keymap.set("n", "<C-t>", function() ui.nav_file(2) end, { desc = "Jump to harpoon marked file 2"})
 vim.keymap.set("n", "<C-n>", function() ui.nav_file(3) end, { desc = "Jump to harpoon marked file 3"})
 vim.keymap.set("n", "<C-s>", function() ui.nav_file(4) end, { desc = "Jump to harpoon marked file 4"})
+

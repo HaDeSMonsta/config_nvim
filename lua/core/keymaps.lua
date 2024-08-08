@@ -1,6 +1,6 @@
 -- Define opts for all maps
 function OPTS(description)
-    return { desc = description, silent = true }
+	return { desc = description, silent = true }
 end
 local function cmd(command)
 	return string.format(":%s<CR>", command)
